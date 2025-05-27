@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio Web de Nicolle Villarreal Melo.">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Mi Portafolio</h1>
+        <a href="index.html" class="boton nav-button">← Volver al Inicio</a>
+    </header>
+
+    <main class="content-portfolio">
+        <section class="card profile-card">
+            <h2><span class="icon">👤</span> Sobre Mí / Perfil</h2>
+            <div class="profile-info">
+                <img src="foto.jpg" alt="Foto de Perfil de Nicolle Villarreal" class="perfil-img">
+                <p>Estudiante Universitaria de Ingeniería de Software, con altas capacidades de adaptación y aprendizaje, habilidades comunicativas, competencias digitales y tecnológicas. Entusiasta, creativa, puntual, empática, organizada, y con capacidad de trabajo en equipo. Con valores éticos que hacen una persona honesta, leal, comprometida, respetuosa y confiable. </p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="card">
+            <h2><span class="icon">🎓</span> Formación Académica</h2>
+            <ul>
+                <li><strong>INGENIERIA DE SOFTWARE</strong> - 8 SEMESTRE Universidad Manuela Beltrán (En formación).</li>
+                <li><strong>BACHILLER ACADEMICO</strong> - Colegio Femenino San Juan Bosco.</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="card">
+            <h2><span class="icon">📚</span> Estudios Complementarios</h2>
+            <ul>
+                <li><strong>CURSO BASICO PYTHON</strong> - Platzi (Cursando)</li>
+                <li><strong>ENGLISH DOT WORKS BEGINNER</strong> - Sena</li>
+                <li><strong>DIPLOMADO EN PROGRAMACIÓN PHP</strong> - Politécnico de Colombia</li>
+                <li><strong>DIPLOMADO EN PROGRAMACIÓN JAVA</strong> - Politécnico de Colombia</li>
+                <li><strong>TÉCNICO EN CONTABILIZACIÓN DE OPERACIONES COMERCIALES Y FINANCIERAS</strong> - Sena</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="card">
+            <h2><span class="icon">💼</span> Experiencia Laboral</h2>
+            <div class="trabajos">
+                <article>
+                    <h3>DP Jr Executive - KANTAR Millward Brown</h3>
+                    <p>Mayo 2023 - Actualidad</p>
+                    <ul>
+                        <li>Procesamiento y revisión de datos.</li>
+                        <li>Generación de reportes para investigación de mercados.</li>
+                        <li>Creación de scripts y captura de datos.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Supervisor Administrativo - Interrapidísimo</h3>
+                    <p>Marzo 2022 - Octubre 2022</p>
+                    <ul>
+                        <li>Gestión administrativa y operativa.</li>
+                        <li>Supervisión de procesos internos.</li>
+                        <li>Atención al cliente y resolución de problemas.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="card">
+            <h2><span class="icon">💡</span> Habilidades</h2>
+            <ul class="skills-list">
+                <li>Capacidades de adaptación y aprendizaje</li>
+                <li>Habilidades comunicativas</li>
+                <li>Competencias digitales y tecnológicas</li>
+                <li>Entusiasmo</li>
+                <li>Creatividad</li>
+                <li>Puntualidad</li>
+                <li>Empatía</li>
+                <li>Organización</li>
+                <li>Trabajo en equipo</li>
+                <li>Valores éticos (honestidad, lealtad, compromiso, respeto, confiabilidad)</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="card projects-section">
+            <h2><span class="icon">💻</span> Mis Proyectos</h2>
+            <div class="carousel-container">
+                <button class="arrow left-arrow">❮</button>
+                <div class="carousel">
+                    <div class="slide project-slide">
+                        <h3>Plane – Alternativa de código abierto a herramientas como Jira y Asana</h3>
+                        <p>Plane es una herramienta de gestión de proyectos que permite rastrear tareas, épicas y ciclos de manera eficiente. Está construida con tecnologías modernas como React, Next.js, Django y PostgreSQL.</p>
+                        <a href="https://github.com/makeplane/plane" class="boton" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                    </div>
+                    <div class="slide project-slide">
+                        <h3>SpaceX-API – API RESTful para datos de lanzamientos espaciales</h3>
+                        <p>Este proyecto proporciona una API RESTful que ofrece información detallada sobre lanzamientos, cohetes, cápsulas y más relacionados con SpaceX. Es ideal para aprender sobre la construcción y consumo de APIs.</p>
+                        <a href="https://github.com/r-spacex/SpaceX-API" class="boton" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                    </div>
+                    <div class="slide project-slide">
+                        <h3>Crate – Aplicación web y móvil para suscripciones de moda</h3>
+                        <p>Crate es una aplicación de suscripción para ropa y accesorios de moda, construida con Node.js, Express, React, React Native, Redux y GraphQL. Es un excelente ejemplo de una aplicación full-stack moderna.</p>
+                        <a href="https://github.com/atulmy/crate" class="boton" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                    </div>
+                </div>
+                <button class="arrow right-arrow">❯</button>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="card">
+            <h2><span class="icon">🤝</span> Referencias Personales</h2>
+            <div class="referencias-container">
+                <div class="referencia">
+                    <h3>Daniel Villarreal</h3>
+                    <p>Ing. de Sistemas, Mg en seguridad Informática</p>
+                    <p>Contacto: 3163118094</p>
+                </div>
+                <div class="referencia">
+                    <h3>Diego Alejandro Vargas</h3>
+                    <p>Abogado Especialista</p>
+                    <p>Contacto: 3192509674</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="card">
+            <h2><span class="icon">📧</span> Contacto</h2>
+            <p>Puedes contactarme a través de:</p>
+            <ul>
+                <li>Email: <a href="mailto:nicolle010516@gmail.com">nicolle010516@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/nicolle-villarreal-390066277/" class="boton contact-button" target="_blank" rel="noopener noreferrer">Ver perfil de LinkedIn</a></li>
+                <li>Teléfono: <a href="tel:3224549271">3224549271</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.carousel');
+
+            carousels.forEach(carousel => {
+                const leftArrow = carousel.previousElementSibling;
+                const rightArrow = carousel.nextElementSibling;
+                const slides = carousel.children; 
+                let slideIndex = 0;
+
+                if (leftArrow && rightArrow) {
+                    leftArrow.addEventListener('click', () => {
+                        const scrollAmount = slides[0].offsetWidth + 20; // Ancho del slide + gap
+                        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                    });
+
+                    rightArrow.addEventListener('click', () => {
+                        const scrollAmount = slides[0].offsetWidth + 20; // Ancho del slide + gap
+                        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

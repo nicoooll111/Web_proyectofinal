@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noticias del Tiempo - Nicolle Villarreal Melo">
+    <title>Noticias del Tiempo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TU_ID_DE_GA"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'TU_ID_DE_GA');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Noticias del Tiempo</h1>
+        <p>Consulta las últimas noticias meteorológicas y agrega tus propias noticias.</p>
+        <a href="index.html" class="button">⬅ Volver al Inicio</a>
+        <button id="agregar-noticia" class="boton">➕ Agregar Noticia</button>
+    </header>
+
+    <main class="container">
+        <section id="noticias-clima">
+            <h2>🌦 Noticias del Clima</h2>
+            <div class="noticia" itemscope itemtype="https://schema.org/Article">
+                <h3 itemprop="name">Pronóstico para hoy</h3>
+                <p itemprop="description">Consulta el pronóstico meteorológico actualizado.</p>
+                <a href="https://www.eltiempo.com/colombia/otras-ciudades" target="_blank" rel="noopener noreferrer" class="boton" itemprop="url">Ver en El Tiempo</a>
+                <meta itemprop="datePublished" content="2024-05-27">
+                <meta itemprop="dateModified" content="2024-05-27">
+                <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="El Tiempo">
+                </div>
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Nicolle Villarreal Melo - Blog Noticias">
+                </div>
+            </div>
+            <div class="noticia" itemscope itemtype="https://schema.org/Article">
+                <h3 itemprop="name">Fenómenos climáticos recientes</h3>
+                <p itemprop="description">Descubre los últimos eventos meteorológicos extremos.</p>
+                <a href="https://www.eltiempo.com/medio-ambiente" target="_blank" rel="noopener noreferrer" class="boton" itemprop="url">Leer más en El Tiempo</a>
+                <meta itemprop="datePublished" content="2024-05-26">
+                <meta itemprop="dateModified" content="2024-05-26">
+                 <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="El Tiempo">
+                </div>
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Nicolle Villarreal Melo - Blog Noticias">
+                </div>
+            </div>
+
+            <a href="https://www.eltiempo.com/" target="_blank" rel="noopener noreferrer" class="boton boton-actualizar-noticias">
+                Actualizarme con El Tiempo 📰
+            </a>
+        </section>
+
+        <section id="noticias-dinamicas">
+            <h2>📝 Noticias Personalizadas</h2>
+            <div id="lista-noticias"></div>
+        </section>
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Agregar Noticia</h3>
+            <input type="text" id="titulo-noticia" placeholder="Título">
+            <input type="file" id="imagen-noticia-file" accept="image/*">
+            <img id="imagen-preview" src="#" alt="Previsualización de la imagen" style="display: none; max-width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
+            <textarea id="contenido-noticia" placeholder="Descripción"></textarea>
+            <button id="guardar-noticia" class="boton">Guardar</button>
+            <button id="cerrar-modal" class="boton">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

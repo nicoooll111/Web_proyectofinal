@@ -1,0 +1,818 @@
+/* Estilos generales */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #F9F9F9; /* Fondo blanco suave */
+    color: #333333; /* Gris oscuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido del body horizontalmente */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    /* justify-content: center; /* Desactivar para que el contenido se alinee arriba en páginas de contenido */
+}
+
+/* Nuevo estilo para el recuadro principal del index (solo para index.html) */
+.main-card-container {
+    background: rgba(255, 255, 255, 0.95); /* Fondo blanco con ligera opacidad */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados sutiles */
+    box-shadow: 0 10px 30px rgba(192, 142, 143, 0.7); /* Sombra rosada más pronunciada */
+    width: 90%; /* Ancho responsivo */
+    max-width: 550px; /* Ancho máximo para el recuadro */
+    text-align: center; /* Centrar el texto dentro del recuadro */
+    display: flex; /* Para organizar el header y el main */
+    flex-direction: column; /* Apilarlos verticalmente */
+    align-items: center; /* Centrar su contenido */
+    margin-top: 20px; /* Pequeño margen superior si no está centrado verticalmente por el body */
+    margin-bottom: 20px; /* Pequeño margen inferior */
+    box-sizing: border-box; /* Asegura que el padding no añada ancho extra */
+}
+
+/* Estilos para el encabezado principal (index.html) */
+.main-header {
+    text-align: center;
+    margin-bottom: 30px; /* Espacio debajo del título, dentro del recuadro */
+    padding-top: 0; /* Eliminar padding superior si ya lo tiene el contenedor */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+}
+
+.main-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3em; /* Tamaño de fuente ligeramente más pequeño para caber en el recuadro */
+    color: #C08E8F; /* Rosado elegante */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Eliminar márgenes para que el padding del main-card-container funcione */
+}
+
+/* Contenido principal de la página de inicio (dentro del recuadro) */
+.index-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0; /* Eliminar padding si el recuadro ya lo tiene */
+    box-sizing: border-box;
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    max-width: none; /* Eliminar el max-width anterior ya que lo controla el main-card-container */
+}
+
+/* Sección de introducción (si añades un párrafo de bienvenida) */
+.intro-section {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #555555;
+    max-width: 600px;
+}
+
+/* Contenedor de botones de navegación principales (index.html) */
+.main-nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los botones, ajustado un poco */
+    width: 100%;
+    max-width: 320px; /* Limita el ancho de los botones dentro del recuadro */
+}
+
+/* Estilos específicos para los botones de navegación principales */
+.main-nav-button {
+    width: 100%;
+    padding: 18px 25px; /* Ajuste el padding para un mejor aspecto */
+    font-size: 1.4em; /* Ajuste el tamaño de fuente */
+    letter-spacing: 0.05em;
+    box-shadow: 0 5px 10px rgba(192, 142, 143, 0.5); /* Sombra más sutil */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra de texto en botones */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav-button .icon {
+    margin-right: 12px; /* Ajuste el espacio entre el icono y el texto */
+    font-size: 1.1em;
+}
+
+.main-nav-button:hover {
+    transform: translateY(-3px) scale(1.01); /* Efecto de "levantar" más sutil */
+    box-shadow: 0 8px 15px rgba(192, 142, 143, 0.7); /* Sombra más fuerte al hover */
+}
+
+/* Contenedor principal de las dos columnas de noticias (para noticias.html) */
+.container { /* Este es el .container para noticias.html, no para index.html */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Menú lateral (Mantener si lo usas, si no, borrar) */
+#menu-portafolio {
+    width: 250px; /* Ocupa el ancho del menú lateral */
+    background: #EAEAEA;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#menu-portafolio ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu-portafolio li {
+    margin: 10px 0;
+}
+
+/* Botones de navegación (para menús y volver al inicio) */
+.nav-button, .button {
+    display: block;
+    padding: 12px;
+    background-color: #C08E8F;
+    color: #FFFFFF;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-button:hover, .button:hover {
+    background-color: #8E8E93;
+    transform: scale(1.05);
+}
+
+/* Estilos para el encabezado de páginas internas (Portafolio, Catálogo, Noticias) */
+.page-header {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px 20px; /* Más espacio en la parte superior */
+    background-color: #f9f9f9; /* Fondo similar al body */
+    border-bottom: 2px solid #C08E8F; /* Línea separadora */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 20px; /* Espacio antes del contenido principal */
+}
+
+.page-header h1 {
+    font-size: 2.8em; /* Tamaño de fuente del título de página */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    color: #C08E8F;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.page-header .nav-button {
+    margin-top: 10px; /* Margen para el botón de volver */
+    width: 200px; /* Ancho fijo para este botón */
+    font-size: 1.1em;
+    padding: 10px 15px;
+}
+
+/* Contenedor principal de las páginas de contenido (como Portafolio) */
+.content-portfolio {
+    width: 90%;
+    max-width: 900px; /* Ancho máximo para el contenido del portafolio */
+    margin: 20px auto 50px auto; /* Centrar y darle espacio */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacio entre secciones (tarjetas) */
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* Tarjetas para secciones (generales, ya existentes, pero revisar ajustes) */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px; /* Más padding para las secciones */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 15px rgba(192, 142, 143, 0.4); /* Sombra más suave */
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #E0E0E0; /* Borde sutil */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de levantar al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(192, 142, 143, 0.6);
+}
+
+/* Estilos para los títulos h2 dentro de las tarjetas */
+.card h2 {
+    text-align: left; /* Alinea los títulos a la izquierda */
+    color: #C08E8F;
+    font-size: 1.8em; /* Tamaño de fuente para los títulos de sección */
+    margin-top: 0;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    display: flex; /* Para alinear el icono con el texto */
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+}
+
+.card h2 .icon {
+    font-size: 1.2em; /* Tamaño del icono */
+    color: #8E8E93; /* Color diferente para el icono si lo deseas */
+}
+
+/* SECCIÓN SOBRE MÍ / PERFIL */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear contenido de la tarjeta a la izquierda */
+}
+
+.profile-info {
+    display: flex;
+    align-items: center; /* Alinear imagen y texto */
+    gap: 25px; /* Espacio entre la imagen y el texto */
+    flex-wrap: wrap; /* Permite que el contenido se envuelva en pantallas pequeñas */
+    text-align: left;
+}
+
+.profile-info p {
+    flex: 1; /* Permite que el párrafo ocupe el espacio restante */
+    min-width: 280px; /* Ancho mínimo para el párrafo antes de envolver */
+    line-height: 1.6;
+    color: #555555;
+    font-size: 1.1em;
+}
+
+.perfil-img {
+    width: 150px; /* Tamaño de la imagen de perfil */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #C08E8F; /* Borde alrededor de la imagen */
+    box-shadow: 0 5px 15px rgba(192, 142, 143, 0.5);
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+
+/* Estilos para las listas dentro de las tarjetas (Formación, Estudios, Habilidades, Contacto) */
+.card ul {
+    list-style: none; /* Eliminar el estilo de lista por defecto */
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    margin-bottom: 12px;
+    padding-left: 25px; /* Espacio para el pseudo-elemento */
+    position: relative; /* Para el pseudo-elemento del estilo de lista */
+    line-height: 1.5;
+    font-size: 1.05em;
+    color: #444;
+}
+
+/* Pseudo-elemento para un "bullet" personalizado */
+.card ul li::before {
+    content: '•'; /* O un emoji como '✨' o '👉' */
+    color: #C08E8F; /* Color del bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em; /* Ajustar posición */
+    position: absolute;
+    left: 0;
+}
+
+/* Estilo específico para la lista de habilidades */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las habilidades se envuelvan */
+    gap: 10px; /* Espacio entre cada habilidad */
+}
+
+.skills-list li {
+    background-color: #EAEAEA;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 0; /* Eliminar margen inferior si hay espacio entre ellas */
+}
+
+.skills-list li::before {
+    content: ''; /* Eliminar el bullet para las habilidades */
+}
+
+
+/* SECCIÓN REFERENCIAS PERSONALES */
+.referencias-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que las referencias se envuelvan */
+    gap: 20px; /* Espacio entre las referencias */
+    justify-content: center; /* Centrar referencias si hay pocas */
+}
+
+.referencia {
+    background: rgba(255, 255, 255, 0.9); /* Fondo similar a las tarjetas */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Permite que las referencias se expandan */
+    min-width: 280px; /* Ancho mínimo antes de apilar */
+    max-width: 45%; /* Maximo 2 por fila en escritorio */
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.referencia h3 {
+    color: #8E8E93; /* Color para el nombre de la referencia */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.referencia p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+
+/* Ajustes para el carrusel de proyectos (RESTAURADO) */
+.projects-section .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Asegura que las flechas se queden dentro del contenedor de la tarjeta */
+}
+
+.projects-section .carousel {
+    display: flex;
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    scroll-snap-type: x mandatory; /* Para un desplazamiento suave y que se "enganche" a los slides */
+    -webkit-overflow-scrolling: touch; /* Para un desplazamiento suave en iOS */
+    margin-left: 10px; /* Margen para que los slides no peguen con la flecha izquierda */
+    margin-right: 10px; /* Margen para que los slides no peguen con la flecha derecha */
+    padding-bottom: 15px; /* Espacio para la barra de scroll si aparece */
+}
+
+.projects-section .slide {
+    flex: 0 0 80%; /* Cada slide ocupa el 80% del ancho del carrusel */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 10px; /* Espacio entre los slides */
+    scroll-snap-align: start; /* Se alinea al inicio de cada slide */
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Transición para el hover */
+}
+
+.projects-section .slide:hover {
+    transform: translateY(-5px); /* Efecto al pasar el ratón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.projects-section .slide h3 {
+    color: #C08E8F;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.projects-section .slide p {
+    margin-bottom: 15px;
+}
+
+.projects-section .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #C08E8F;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 50%;
+    z-index: 1; /* Asegura que las flechas estén por encima de los slides */
+}
+
+.projects-section .left-arrow {
+    left: 15px;
+}
+
+.projects-section .right-arrow {
+    right: 15px;
+}
+
+.projects-section .arrow:hover {
+    background-color: #8E8E93;
+}
+
+
+/* Separadores gráficos */
+.divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #C08E8F, #8E8E93);
+    margin: 30px auto;
+}
+
+/* Botones animados (genéricos, se usarán para agregar noticias y guardar, etc.) */
+.boton {
+    display: block;
+    width: 250px;
+    margin: 20px auto;
+    padding: 15px;
+    font-size: 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #C08E8F, #8E8E93);
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #8E8E93, #C08E8F);
+}
+
+/* Estilo de catálogo - Productos */
+.productos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.producto {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(192, 142, 143, 0.4);
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.producto h3 {
+    color: #C08E8F;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.producto p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.producto .boton {
+    display: block;
+    padding: 12px;
+    background-color: #C08E8F;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    width: auto;
+    margin: 10px auto 0;
+}
+
+.producto .boton:hover, .producto .boton:focus {
+    background-color: #8E8E93;
+    outline: 2px solid #FFFFFF;
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.modal-content img#imagen-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Estilos de las noticias individuales (tanto clima como dinámicas) */
+.imagen-noticia {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.noticia {
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
+    margin-bottom: 1rem;
+}
+
+/* Sección de noticias del clima */
+#noticias-clima {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(192, 142, 143, 0.5);
+    text-align: center;
+}
+
+#noticias-clima h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#noticias-clima .noticia {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#noticias-clima .noticia:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Estilo específico para el botón de actualizar noticias */
+.boton-actualizar-noticias {
+    width: 250px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    background: linear-gradient(135deg, #C08E8F, #8E8E93);
+    color: #FFFFFF;
+    font-size: 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.boton-actualizar-noticias:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #8E8E93, #C08E8F);
+}
+
+/* Sección de noticias dinámicas */
+#noticias-dinamicas {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(192, 142, 143, 0.5);
+    text-align: center;
+}
+
+#noticias-dinamicas h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#lista-noticias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-noticias .noticia {
+    width: 280px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#lista-noticias .noticia img {
+    max-height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#lista-noticias .noticia h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #C08E8F;
+}
+
+#lista-noticias .noticia p {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #555;
+}
+
+#lista-noticias .noticia small {
+    margin-bottom: 15px;
+    color: #777;
+}
+
+#lista-noticias .noticia button {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+/* Media Queries para responsividad (ajustes generales y específicos) */
+@media (max-width: 768px) {
+    /* Ajustes para index.html */
+    .main-card-container {
+        padding: 30px; /* Menos padding en móvil */
+        max-width: 90%; /* Permitir que ocupe más ancho en pantallas pequeñas */
+    }
+    .main-header h1 {
+        font-size: 2em; /* Reducir tamaño del título en móvil */
+    }
+    .main-nav-buttons {
+        gap: 15px; /* Menos espacio entre botones en móvil */
+        max-width: 280px; /* Un poco más estrecho en móvil */
+    }
+    .main-nav-button {
+        font-size: 1.1em; /* Reducir tamaño de fuente de botones en móvil */
+        padding: 12px 15px;
+    }
+    .main-nav-button .icon {
+        margin-right: 8px;
+    }
+
+    /* Ajustes para portafolio.html */
+    .page-header h1 {
+        font-size: 2em;
+    }
+    .page-header .nav-button {
+        width: 180px;
+    }
+
+    .content-portfolio {
+        width: 95%;
+        padding: 0 5px;
+        gap: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .profile-info {
+        flex-direction: column; /* Apilar imagen y texto en móvil */
+        align-items: center; /* Centrar ambos */
+        text-align: center;
+    }
+
+    .profile-info p {
+        min-width: unset; /* Eliminar min-width en móvil */
+        text-align: center; /* Centrar texto en móvil */
+    }
+
+    .perfil-img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .card ul li {
+        font-size: 1em;
+        padding-left: 20px;
+    }
+    .card ul li::before {
+        margin-left: -1.2em;
+    }
+
+    .skills-list {
+        justify-content: center; /* Centrar habilidades en móvil */
+    }
+
+    .referencias-container {
+        flex-direction: column; /* Apilar referencias en móvil */
+        align-items: center;
+    }
+    .referencia {
+        min-width: unset;
+        max-width: 90%; /* Ajustar ancho en móvil */
+    }
+
+    /* Ajustes para el carrusel de proyectos en móvil */
+    .projects-section .slide {
+        flex: 0 0 95%; /* Ocupa casi todo el ancho en móvil */
+        margin: 0 5px;
+    }
+
+    .projects-section .arrow {
+        font-size: 1em;
+        left: 5px;
+        right: 5px;
+    }
+
+    /* Reglas para noticias.html en móvil (mantener las existentes) */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #noticias-clima,
+    #noticias-dinamicas {
+        width: 90%;
+        margin: 15px 0;
+    }
+    #noticias-clima .noticia {
+        width: 90%;
+    }
+    .boton-actualizar-noticias {
+        width: 90%;
+    }
+    .productos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .producto {
+        width: 90%;
+    }
+}
